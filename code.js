@@ -1,20 +1,8 @@
-function toggleMode(){
-  const html = document.documentElement
-   html.classList.toggle("light");
-
-   const img = document.querySelector('#profile img');
-
-   if(html.classList.contains('light')){
-    img.setAttribute('src', './assets/avatar-light.png')
-  }else{
-    img.setAttribute("src", "./assets/Avatar.png")
+ window.addEventListener('resize', function () {
+  if (window.innerWidth >= 600) {
+      
+      document.body.style.backgroundColor = /assets/another_screen.png;
+  } else {
+    document.body.style.backgroundColor = /assets/back_ground_desktop.png;
   }
-  /*
-  if(html.classList.contains('light')){
-    html.classList.remove('light');
-  }
-  else{
-    html.classList.add('light');
-  }
-  */
-}
+});

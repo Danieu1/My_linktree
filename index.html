@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="light">
+<html>
   <head>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -10,38 +10,23 @@
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>MyLinks</title>
+    <title>Vertentes</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
 
   <body>
     <div id="container">
       <div id="profile">
-        <img src="/assets/Avatar.png" alt="minha foto" />
-        <p>Daniel O. Fernandes</p>
+        <img src="assets\Logo_vertentes.png" alt="logo" />
       </div>
-      <div id="switch" onclick="toggleMode()">
-        <button>
-        </button>
-        <span></span>
-      </div>
-      <ul>
-        <li>
-          <a href="https://github.com/Danieu1" target="_blank">GitHub</a>
-        </li>
-        <li>
-          <a
-            href="https://www.linkedin.com/in/daniel-fernandes-b89ab6188/"
-            target="_blank"
-            >Linkedin</a
-          >
-        </li>
-        <li>
-          <a href="https://www.instagram.com/desig.niel/" target="_blank"
-            >Instagram</a
-          >
-        </li>
-      </ul>
+
+      <div>
+        <label for="login">Login:</label>
+        <input type="text" id="login" name="login"><br><br>
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" name="senha"><br><br>
+        <input type="submit" value="OK">
+    </div>
 
       <div id="social-links">
         <a href="https://github.com/Danieu1" target="_blank">
@@ -59,11 +44,23 @@
           <ion-icon name="logo-instagram"></ion-icon>
         </a>
       </div>
+
       <footer>By Daniel O. Fernandes</footer>
     </div>
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     <script src="code.js"></script>
   </body>
 
-  
+  <script>
+    // Adiciona um ouvinte de evento para redimensionamento da janela
+    window.addEventListener('resize', function () {
+        // Verifica o tamanho da janela e aplica diferentes estilos de plano de fundo
+        if (window.innerWidth >= 600) {
+            document.body.style.backgroundColor = '#f0f0f0';
+        } else {
+            document.body.style.backgroundColor = '#d3d3d3';
+        }
+    });
+</script>
+
 </html>
